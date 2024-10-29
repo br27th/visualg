@@ -1,27 +1,27 @@
-algoritmo "contar_valores"
-
+algoritmo "ContarOcorrencias"
 var
    vetor: vetor[1..15] de inteiro
-   valor, i, contador: inteiro
-
+   valorBuscado, i, contador: inteiro
 inicio
-
-   contador <- 0
-
+   
+   escreva("Digite 15 nÃºmeros inteiros para o vetor:\n")
    para i de 1 ate 15 faca
-      escreva("Informe o valor da posição ", i, ": ")
+      escreva("Elemento [", i, "]: ")
       leia(vetor[i])
    fimpara
 
-   escreva("Informe o valor que deseja contar no vetor: ")
-   leia(valor)
 
+   escreva("Digite o valor que deseja buscar: ")
+   leia(valorBuscado)
+
+
+   contador := 0
+
+   
    para i de 1 ate 15 faca
-      se vetor[i] = valor entao
-         contador <- contador + 1
+      se (vetor[i] = valorBuscado) entao
+         contador := contador + 1
       fimse
    fimpara
-
-   escreval("O valor ", valor, " ocorre ", contador, " vez(es) no vetor.")
-
+   escreva("O valor ", valorBuscado, " ocorre ", contador, " vez(es) no vetor.")
 fimalgoritmo
